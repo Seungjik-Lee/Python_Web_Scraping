@@ -12,3 +12,8 @@ cartoons = soup.find_all("td", attrs={"class": "title"})
 # link = cartoons[0].a["href"]
 # print(title)
 # print("https://comic.naver.com" + link)
+
+for cartoon in cartoons:
+    title = cartoon.a.get_text()
+    link = "https://comic.naver.com" + cartoon.a["href"]
+    print(title, link)
